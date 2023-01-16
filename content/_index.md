@@ -35,16 +35,14 @@ l1nk1text: Terms of Service
 l1nk2text: Privacy Policy
 l1nk3d: and
 l1m1tati0ns: Plan Limit
-questi0n1: Are my files safe with Aspose?
-answ3r1: Aspose Apps allows customers to optionally upload files to Aspose Apps’s own storage. None of these files are accessible to any person other than the customer himself. Aspose App allows customers to upload files for conversation or other document operations. This policy outlines how we treat retention of those files. All files uploaded to the website are retained for a maximum of 24 hours before being deleted automatically thereafter. These files are not accessible to any person other than the person who uploads them.
-questi0n2: Can I get a discount?
-answ3r2: Our services are fairly priced so we do not offer any discounts. We care about our customers and are always looking for ways to offer them the best value for money. Our pricing plan is fair for both us and consumers so we do not enter into any discount or price negotiations.
-questi0n3: Can I receive technical support when I'm evaluating?
-answ3r3: Yes! Our support teams will be glad to assist. We want to ensure there are no bad surprises after you begin using the product. We provide an online forum that is maintained by our highly trained development staff. Whether you have already purchased or are still evaluating we will always provide timely, helpful assistance.
-questi0n4: Do you include tax in your prices listed on the website or quotes?
-answ3r4: As an Australian company the only tax we apply is GST to those purchasing from Australia. Our prices on the website exclude GST. Our tax invoices for Australian customers include GST.
-questi0n5: How can I pay?
-answ3r5: You can choose to pay your balance at the end of each month by credit card, or pre-pay by crediting your account in advance by bank transfer. All prices are in US dollars (USD). For further details refer to these instructions
-answ3rhyp3rl1nk1: Bank transfer
-answ3rhyp3rl1nk2: Credit card
+questi0n1: What if I want to upgrade or downgrade my subscription?
+answ3r1: Yes, you can upgrade or downgrade at any time. If you choose to upgrade, you'll pay a prorated amount for the rest of the month. If you choose to downgrade, you'll be credited on next month's bill. To upgrade or downgrade your subscription, please contact our support team.
+questi0n2: Which Subscription Plan fits my needs?
+answ3r2: In order to test the API and get an idea of the product, you can simply sign up for the Free Plan. As soon as you or your application requires more than 100 API requests per month, you would be well-advised to sign up for one of the premium subscription plans, starting at only $7 per month, or at a 43% discount - if you decide to pay annually.
+questi0n3: Can I also pay yearly?    
+answ3r3: Yes. If you choose annual billing, the total price of your Subscription Plan will be 43% lower than the total amount you would pay with a monthly payment frequency.
+questi0n4: Can I cancel my subscription?
+answ3r4: At any time! Subscriptions are charged monthly or annually in advance. Canceling will switch you to the Free plan. Already paid subscriptions can not be refunded (except when you are in the very first 30 days of your use of Aspose.app which is subject to a money-back guarantee if you are not satisfied).
+questi0n5: Is my monthly/yearly plan automatically renewed?
+answ3r5: Yes, the premium plans are subscription-based and will be automatically renewed.
 ---
