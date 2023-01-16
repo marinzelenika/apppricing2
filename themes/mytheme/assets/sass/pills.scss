@@ -5,7 +5,7 @@
     border-radius: 10px;
 }
 .nav-link{
-    color: black !important;
+    border: 1px solid black;
 }
 .m-5{
     display: flex;
@@ -15,5 +15,5 @@
 .save-on-annual{
     position: absolute;
     bottom: 0;
-    font-size: small;
+    font-size: medium;
 }
