@@ -1,4 +1,4 @@
-baseURL = 'https://apppricingblue.netlify.app'
+baseURL = 'https://apppricingblue.netlify.app/pricing'
 languageCode = 'en-us'
 title = 'Aspose.app Pricing'
 theme = 'mytheme'
