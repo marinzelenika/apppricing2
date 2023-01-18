@@ -9,7 +9,7 @@
     transform: scale(1);
     transition: all .5s ease 0s;
     word-wrap: break-word !important;
-    height: 600px;
+    height: 700px;
     position: relative;
 }
 .pricingTable:hover {
@@ -46,10 +46,11 @@
 }
 
 .pricingTable .heading {
-    font-size: 1.3em;
+    font-size: 1em;
     color: #1a89d0;
     margin-bottom: 20px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .pricingTable .pricing-content ul {
@@ -60,7 +61,7 @@
 
 .pricingTable .pricing-content ul li {
     line-height: 30px;
-    color: #a7a8aa
+    color: #333
 }
 
 .pricingTable .pricingTable-signup a {
@@ -73,6 +74,12 @@
     border: 2px solid #1a89d0;
     text-transform: uppercase;
     transition: all .3s ease 0s;
+    font-weight: 600;
+    bottom: 4em;
+    left: 4em;
+    right: 4em;
+    margin: auto;
+    position: absolute;
 }
 
 .pricingTable .pricingTable-signup a:hover {
@@ -126,6 +133,9 @@
   padding: 5px 10px;
   color: yellow;
   text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-top: 2em;
 }
 
 .pricingTable.green .pricingTable-header {
@@ -135,6 +145,7 @@
 .pricingTable.green .pricingTable-signup a {
     background: white;
     color: #1a89d0;
+    font-weight: 600;
 }
 
 .pricingTable.green .pricing-content ul li, .pricingTable.green .pricingTable-header i {

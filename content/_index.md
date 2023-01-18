@@ -11,22 +11,29 @@ h0me: Home
 pr1c1ng: Pricing
 m0nthly: Monthly
 y3arly: Yearly
-sav3: Save up to 43% on annual plans
+sav3: Save up to 43% on annual plans!
 p3rm0nth: per month
 p3ry3ar: per year
 cust0mpr1ce: Custom price
-card1text1: History of generations and scans
-card1text2: No ads
-card1text3: No Trial Period
-card1text4: Always Free
-card1text5: No Subscription Charge
-card2text4: Additional file formats
-card2text3: Additional generation settings
-card2text5: Additional QR art
-card3text1: Flexible Payment Options
-card3text2: Custom Contract
-card3text3: Additional QR art
-card3text4: Additional generation settings
+card1text1: Add-free
+card1text2: No Trial Period
+card1text3: Always Free
+card1text4: No Subscription Charge
+card1text5: Encrypted data transfer and storage
+card2text1: All features of the Free plan
+card2text2: Convert PDF to Word with OCR
+card2text3: Convert PDF to PDF/A
+card2text4: Work with big files
+card2text5: Support for teams
+card2text6: Discount for large volumes
+card2text7: Multiple support of batch processing
+card2text8: Developer Support
+card2text9: Work on Web, Mobile and Desktop
+card2text10: Digital signatures
+card3text1: All features of the Premium plan
+card3text2: Dedicated Support Account Manager
+card3text3: Custom negotiated volume discount
+card3text4: Dedicated servers
 s1gnup: SIGN UP
 upgrad3: UPGRADE
 c0ntact2s: CONTACT US
