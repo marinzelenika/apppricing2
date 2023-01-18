@@ -41,8 +41,10 @@ questi0n2: Which Subscription Plan fits my needs?
 answ3r2: In order to test the API and get an idea of the product, you can simply sign up for the Free Plan. As soon as you or your application requires more than 100 API requests per month, you would be well-advised to sign up for one of the premium subscription plans, starting at only $7 per month, or at a 43% discount - if you decide to pay annually.
 questi0n3: Can I also pay yearly?    
 answ3r3: Yes. If you choose annual billing, the total price of your Subscription Plan will be 43% lower than the total amount you would pay with a monthly payment frequency.
-questi0n4: Can I cancel my subscription?
-answ3r4: At any time! Subscriptions are charged monthly or annually in advance. Canceling will switch you to the Free plan. Already paid subscriptions can not be refunded (except when you are in the very first 30 days of your use of Aspose.app which is subject to a money-back guarantee if you are not satisfied).
+questi0n4: Can I receive technical support when I'm evaluating?
+answ3r4: Yes! Our support teams will be glad to assist. We want to ensure there are no bad surprises after you begin using the product. We provide an online forum that is maintained by our highly trained development staff. Whether you have already purchased or are still evaluating we will always provide timely, helpful assistance.
 questi0n5: Is my monthly/yearly plan automatically renewed?
 answ3r5: Yes, the premium plans are subscription-based and will be automatically renewed.
+questi0n6: Do I need to enter credit card details to evaluate?
+answ3r6: No, you can use the trial plan without entering your credit card details.
 ---

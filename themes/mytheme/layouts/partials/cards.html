@@ -25,7 +25,7 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
             <div class="col-md-3 col-sm-6">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
-                        <i class="fa fa-smile-o"></i>
+                        
                         <h3 class="heading mt-1">{{ .Name }}</h3>
                     </div>
                     
@@ -66,7 +66,7 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
                 <div class="pricingTable green">
                   <div class="most-popular">Most Popular</div>
                     <div class="pricingTable-header">
-                        <i class="fa fa-diamond"></i>
+                       
                         <h3 class="heading mt-1">{{ .Name }}</h3>
                     </div>
                     
@@ -98,14 +98,14 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
                         </ul>
                     </div>
                     <div class="pricingTable-signup">
-                        <a href="#">{{ $.Page.Params.upgrad3 }}</a>
+                        <a href="https://dashboard.aspose.app/billing/subscription/upgrade">{{ $.Page.Params.upgrad3 }}</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="pricingTable blue">
                     <div class="pricingTable-header">
-                        <i class="fa fa-briefcase"></i>
+                        
                         <h3 class="heading mt-1">Business</h3>
                     </div>
                     
@@ -148,12 +148,13 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
             <div class="col-md-3 col-sm-6">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
-                        <i class="fa fa-smile-o"></i>
-                        {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
+                        <h3 class="heading mt-1">{{ .Name }}</h3>
+                        
+                    </div>
+                    
+                    {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
                         <div class="price-value"> ${{ .SubscriptionPeriodCharge }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
                         {{ end }} {{ end }}
-                    </div>
-                    <h3 class="heading mt-1">{{ .Name }}</h3>
                     {{end}}
                     <div class="pricing-content">
                         <ul>
@@ -188,12 +189,13 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
                 <div class="pricingTable green">
                   <div class="most-popular">Most Popular</div>
                     <div class="pricingTable-header">
-                        <i class="fa fa-diamond"></i>
-                        {{ range after 1 .PricingPlans }} {{ range .PaymentScheduleList }}
+                        <h3 class="heading mt-1">{{ .Name }}</h3>
+                       
+                    </div>
+                    
+                     {{ range after 1 .PricingPlans }} {{ range .PaymentScheduleList }}
                         <div class="price-value"> ${{ .SubscriptionPeriodCharge }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
                         {{ end }} {{ end }}
-                    </div>
-                    <h3 class="heading mt-1">{{ .Name }}</h3>
                     {{ end }}
                     <div class="pricing-content">
                         <ul>
@@ -219,17 +221,18 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
                         </ul>
                     </div>
                     <div class="pricingTable-signup">
-                        <a href="#">{{ $.Page.Params.s1gnup }}</a>
+                        <a href="https://dashboard.aspose.app/billing/subscription/upgrade">{{ $.Page.Params.upgrad3 }}</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="pricingTable blue">
                     <div class="pricingTable-header">
-                        <i class="fa fa-briefcase"></i>
-                        <div class="price-value custom-price"> {{ $.Page.Params.cust0mpr1ce }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
+                        <h3 class="heading mt-1">Business</h3>
+                        
                     </div>
-                    <h3 class="heading mt-1">Business</h3>
+                    
+                    <div class="price-value custom-price"> {{ $.Page.Params.cust0mpr1ce }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
                     <div class="pricing-content">
                         <ul>
                             <li>
@@ -270,6 +273,7 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
     
 
 {{ end }}{{ end }} {{ end }} {{ end }}
+<p class="text-center mt-1">*All prices are in USD</p>
 <p class="text-center mb-5 mt-4">{{ .Params.byUpl0ad1ng }} <a href="https://about.aspose.app/legal/tos/" style="color: #1a89d0">{{ .Params.l1nk1text }}</a>  {{ .Params.l1nk3d }} <a href="https://about.aspose.app/legal/privacy-policy/" style="color: #1a89d0">{{ .Params.l1nk2text }}</a> </p>
 
 

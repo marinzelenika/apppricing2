@@ -4,10 +4,13 @@
     margin: 0 -15px;
     box-shadow: 0 0 10px #ababab;
     padding-bottom: 40px;
+    padding-top: 0.5em;
     color: #cad0de;
     transform: scale(1);
     transition: all .5s ease 0s;
     word-wrap: break-word !important;
+    height: 600px;
+    position: relative;
 }
 .pricingTable:hover {
     transform: scale(1.05);
@@ -15,7 +18,7 @@
 }
 
 .pricingTable .pricingTable-header {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 10px;
     transition: all .5s ease 0s
 }
@@ -43,7 +46,7 @@
 }
 
 .pricingTable .heading {
-    font-size: 24px;
+    font-size: 1.3em;
     color: #1a89d0;
     margin-bottom: 20px;
     text-transform: uppercase
@@ -116,10 +119,13 @@
 .most-popular {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
-  background-color: #ffffff;
+  //background-color: #ffffff;
   padding: 5px 10px;
-  color: #1a89d0;
+  color: yellow;
+  text-transform: uppercase;
 }
 
 .pricingTable.green .pricingTable-header {
@@ -144,8 +150,13 @@
 }
 
 .pricingTable.blue .price-value {
-    font-size: 60px;
+    font-size: 3em;
     line-height: 1;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+}
+.pricingTable.blue .month {
+    margin-top: 2.1em;
 }
 
 @media screen and (max-width:990px) {
