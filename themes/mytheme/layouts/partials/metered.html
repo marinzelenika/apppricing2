@@ -46,14 +46,15 @@
           <th style="width: 22%">Rate / Credit</th>
         </tr>
       </thead>
-      {{ range after 1 . }}{{ range first 1 .PricingPlans }} {{ range
+      {{ range after 1 . }}{{ range first 1 .PricingPlans }} {{ range first 1
       .ProductItemsList }} {{ range .MeteredPriceList }}
       <tbody>
         <tr>
           <td>
             {{
-            .StartQuantity }} to {{ .EndQuantity }} credits
+            .StartQuantity }} to {{ if eq .EndQuantity nil}}unlimited{{ else }} {{ .EndQuantity }} {{ end }} credits
           </td>
+          
           <td>${{ .UnitPrice }} / credit</td>
         </tr>
       </tbody>
