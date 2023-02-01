@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://apppricingblue.netlify.app/de/</loc>
+    <loc>https://purchase.aspose.app/de/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://apppricingblue.netlify.app/"
+                href="https://purchase.aspose.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://apppricingblue.netlify.app/es/"
+                href="https://purchase.aspose.app/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://apppricingblue.netlify.app/pt/"
+                href="https://purchase.aspose.app/pt/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://apppricingblue.netlify.app/de/"
+                href="https://purchase.aspose.app/de/"
                 />
   </url><url>
-    <loc>https://apppricingblue.netlify.app/de/deutsch/</loc>
+    <loc>https://purchase.aspose.app/de/deutsch/</loc>
   </url><url>
-    <loc>https://apppricingblue.netlify.app/de/categories/</loc>
+    <loc>https://purchase.aspose.app/de/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://apppricingblue.netlify.app/categories/"
+                href="https://purchase.aspose.app/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://apppricingblue.netlify.app/es/categories/"
+                href="https://purchase.aspose.app/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://apppricingblue.netlify.app/pt/categories/"
+                href="https://purchase.aspose.app/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://apppricingblue.netlify.app/de/categories/"
+                href="https://purchase.aspose.app/de/categories/"
                 />
   </url><url>
-    <loc>https://apppricingblue.netlify.app/de/tags/</loc>
+    <loc>https://purchase.aspose.app/de/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://apppricingblue.netlify.app/tags/"
+                href="https://purchase.aspose.app/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://apppricingblue.netlify.app/es/tags/"
+                href="https://purchase.aspose.app/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://apppricingblue.netlify.app/pt/tags/"
+                href="https://purchase.aspose.app/pt/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://apppricingblue.netlify.app/de/tags/"
+                href="https://purchase.aspose.app/de/tags/"
                 />
   </url>
 </urlset>
