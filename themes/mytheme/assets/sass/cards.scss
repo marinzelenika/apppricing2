@@ -170,7 +170,9 @@
     margin-top: 2.1em;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  
+@media (max-width: 300px) {
+    .pricingTable{
+        height: 760px;
+    }
 }
 
