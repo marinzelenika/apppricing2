@@ -4,32 +4,51 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
 
 
 
-<h3 class="display-6 text-center mb-4">Free plan limits</h3>
+<h3 class="display-6 text-center mb-4">Plan limits</h3>
 
     <div class="table-responsive">
       <table class="table text-center">
-        
+        <thead>
+          <tr>
+            <th style="width: 56%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Premium</th>
+          </tr>
+        </thead>
   
         
         <tbody>
-          {{ range first 1 . }}{{ range first 1 .PricingPlans }} {{ range .ProductItemsList }}
+          {{ range . }}{{ range first 1 .PricingPlans }} {{ range .ProductItemsList }}
           <tr>
+            {{ if eq .IsVisibleOnHostedPage true }}
             <th scope="row" class="text-start">{{ .Description | markdownify }}</th>
 
             {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
-            <td>Off</td>
+            <td><i class="fa fa-times" aria-hidden="true"></i></td>
             {{ end }}
-            {{ else if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 1) }}
-            <td>On</td>
+            {{ else if or (eq (int .MaxQuantity) 1) }}
+            <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            {{ else }}
+            <td>{{ .MaxQuantity }} {{ .UnitName }}</td>
+            {{ end }}
+            <td></td>
+            {{ end }} {{ end }} {{ end }}{{ end }}
+            
+            {{/*  {{ range after 1 . }}{{ range first 1 .PricingPlans }} {{ range .ProductItemsList }}
+            {{ if eq .IsVisibleOnHostedPage true }}
+            {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 1) }}
+            <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            {{ end }}
+             {{ else if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
+            <td><i class="fa fa-times" aria-hidden="true"></i></td>
             {{ end }}
             {{ else }}
             <td>{{ .MaxQuantity }} {{ .UnitName }}</td>
             {{ end }}
             
-            <td></td>
-          
+          {{ end }} {{ end }} {{ end }}{{ end }}  */}}
           </tr>
-          {{ end }} {{ end }} {{ end }}
+            
         </tbody>
         
       </table>
@@ -46,18 +65,19 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
         <tbody>
           {{ range after 1 . }}{{ range first 1 .PricingPlans }} {{ range .ProductItemsList }}
           <tr>
+            {{ if eq .IsVisibleOnHostedPage true }}
             <th scope="row" class="text-start">{{ .Description | markdownify }}</th>
             {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 1) }}
-            <td>On</td>
+            <td><i class="fa fa-check" aria-hidden="true"></i></td>
             {{ end }}
             {{ else if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
-            <td>Off</td>
+            <td><i class="fa fa-times" aria-hidden="true"></i></td>
             {{ end }}
             {{ else }}
             <td>{{ .MaxQuantity }} {{ .UnitName }}</td>
             {{ end }}
             <td></td>
-          
+          {{ end }}
           </tr>
           {{ end }} {{ end }} {{ end }}
         </tbody>
