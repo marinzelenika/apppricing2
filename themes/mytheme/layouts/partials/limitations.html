@@ -6,55 +6,205 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
 
 <h3 class="display-6 text-center mb-4">Plan limits</h3>
 
-      <div class="table-responsive">
+      {{/*  <div class="table-responsive">
       <table class="table text-center">
         <thead>
           <tr>
-            <th style="width: 56%;" scope="col"></th>
+            <th style="width: 34%;" scope="col"></th>
             <th style="width: 22%;" scope="col">Free</th>
-            <th style="width: 22%;" scope="col">Premium</th>
+            <th style="width: 22%;" scope="col">Premium monthly</th>
+            <th style="width: 22%;" scope="col">Premium yearly</th>
           </tr>
         </thead>
   
         
         <tbody>
-          {{ range first 1 . }}{{ range first 1 .PricingPlans }} {{ range .ProductItemsList }}
+          
+          {{ range $i, $y := . }}
+          
+          {{ range $g, $h := .PricingPlans }}
+          
+        
+          {{ range $k, $l :=  .ProductItemsList }}
+
+          {{ if and (eq $i 0) (eq $g 0) }}
           <tr>
-            
+          {{ end }}
+           
+         
             {{ if eq .IsVisibleOnHostedPage true }}
-            <th scope="row" class="text-start">{{ .Description | markdownify }}</th>
+            {{ if eq $i 0 }} <th scope="row" class="text-start">{{ .Description | markdownify }}  </th> {{ end }}
+
+
+            {{ if and (eq $i 0) (eq $g 0) }}
+           <td>
             {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
-            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-            {{ end }}
+            <i class="fa fa-times" aria-hidden="true"></i> {{$i}} {{$g}} 
             {{ else if or (eq (int .MaxQuantity) 1) }}
-            <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            <i class="fa fa-check" aria-hidden="true"></i> {{$i}} {{$g}} 
+            {{end}}
             {{ else }}
-            <td>{{ .MaxQuantity }} {{ .UnitName }}</td>
+            {{ .MaxQuantity }} {{ .UnitName }}s {{$i}} {{$g}} 
             {{ end }}
-            {{ end }} {{ end }} {{ end }}{{ end }}
-            <td>{{ range after 1 . }}{{ range first 1 .PricingPlans }} {{ range .ProductItemsList }}
-            {{ if eq .IsVisibleOnHostedPage true }}
-            {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 1) }}
-            <i class="fa fa-check" aria-hidden="true"></i>
-            {{ end }}
-             {{ else if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
-            <i class="fa fa-times" aria-hidden="true"></i>
-            {{ end }}
+          </td>
+           {{end}}
+           {{ if and (eq $i 1) (eq $g 0)}}
+           <td>
+            {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
+            <i class="fa fa-times" aria-hidden="true"></i> {{$i}} {{$g}} 
+            {{ else if or (eq (int .MaxQuantity) 1) }}
+            <i class="fa fa-check" aria-hidden="true"></i> {{$i}} {{$g}} 
+            {{end}}
             {{ else }}
-            {{ .MaxQuantity }} {{ .UnitName }}
+            {{ .MaxQuantity }} {{ .UnitName }}s {{$i}} {{$g}} 
+            {{ end }}
+          </td>
+           {{ end }}
+           {{ if and (eq $i 1) (eq $g 1)}}
+           <td>
+            {{ if eq .ProductItemType "OnOff" }} {{ if or (eq (int .MaxQuantity) 0) }}
+            <i class="fa fa-times" aria-hidden="true"></i> {{$i}} {{$g}} 
+            {{ else if or (eq (int .MaxQuantity) 1) }}
+            <i class="fa fa-check" aria-hidden="true"></i> {{$i}} {{$g}} 
+            {{end}}
+            {{ else }}
+            {{ .MaxQuantity }} {{ .UnitName }}s {{$i}} {{$g}} 
+            {{ end }}
+          </td>
+           {{ end }}
+
+            {{ end }}
+          {{ if and (eq $i 0) (eq $g 0)  }}
+            </tr>
+          {{ end }}
+         
+           
+
+
+          {{ end }}
+         {{ end }}
+         
             {{ end }}
             
-          {{ end }} {{ end }} {{ end }}{{ end }}</td>
             
             
               
-          </tr>
+          
             
         </tbody>
         
       </table>
      
-    </div>    
+    </div>     */}}
+    
+    
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;" scope="col"></th>
+            <th style="width: 22%;" scope="col">Free</th>
+            <th style="width: 22%;" scope="col">Premium monthly</th>
+            <th style="width: 22%;" scope="col">Premium yearly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <th scope="row" class="text-start">The maximum number of barcode operations per day</th>
+          {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 0) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">The maximum number of barcode operations per month</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 1) }}
+            <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 0) (eq $k 1) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 1) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Add the company logo to the barcode</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 2) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+            {{ if and (eq $i 1) (eq $g 0) (eq $k 2) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 2) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Customize the barcode colors</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 3) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+            {{ if and (eq $i 1) (eq $g 0) (eq $k 3) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 3) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Customize the barcode padding</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 4) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+            {{ if and (eq $i 1) (eq $g 0) (eq $k 4) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 4) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     
 
