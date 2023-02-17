@@ -9,7 +9,7 @@
     transform: scale(1);
     transition: all .5s ease 0s;
     word-wrap: break-word !important;
-    height: 700px;
+    height: 600px;
     position: relative;
 }
 .pricingTable:hover {
@@ -171,7 +171,7 @@
 }
 @media (max-width: 320px) {
     .pricingTable{
-        height: 760px;
+        height: 670px;
     }
 }
 
