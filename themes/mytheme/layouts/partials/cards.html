@@ -7,9 +7,7 @@
       <a href="#yearly" class="nav-link">{{ .Params.y3arly }}</a>
     </li>
   </ul>
-  <p class="save-on-annual">
-    {{ .Params.sav3 }}
-  </p>
+  <p class="save-on-annual">{{ .Params.sav3 }}</p>
 </div>
 
 {{ $options := dict "method" "GET" }} {{ with resources.GetRemote
@@ -17,298 +15,448 @@ $.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
 .Content }} {{ with transform.Unmarshal . }}
 
 <div class="demo">
-    <div class="container">
-        <div class="tab-content">
-        <div class="tab-pane fade show active" id="monthly">
+  <div class="container">
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="monthly">
         <div class="row d-flex aligns-items-center justify-content-center">
-            {{ range first 1 . }}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricingTable">
-                    <div class="pricingTable-header">
-                        
-                        <h3 class="heading mt-1">{{ .Name }}</h3>
-                    </div>
-                    
-                    {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
-                        <div class="price-value"> ${{ .SubscriptionPeriodCharge }} <span class="month">{{ $.Page.Params.p3rm0nth }}</span> </div>
-                        {{ end }} {{ end }}
-                    {{end}}
-                    <div class="pricing-content">
-                        <ul>
-                            <li>
-             {{ readFile "static/images/check2.svg" | safeHTML }} {{ $.Page.Params.card1text1 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text2 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text3 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text4 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text5 }}
-            </li>
-                        </ul>
-                    </div>
-                    <div class="pricingTable-signup">
-                        <a href="https://dashboard.aspose.app/">{{ $.Page.Params.s1gnup }}</a>
-                    </div>
-                </div>
-            </div>
-            {{ range after 1 . }}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricingTable green">
-                  <div class="most-popular">Most Popular</div>
-                    <div class="pricingTable-header">
-                       
-                        <h3 class="heading mt-1">{{ .Name }}</h3>
-                    </div>
-                    
-                    {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
-                        <div class="price-value"> ${{ .SubscriptionPeriodCharge }} <span class="month">{{ $.Page.Params.p3rm0nth }}</span> </div>
-                        {{ end }} {{ end }}
-                    {{ end }}
-                    <div class="pricing-content">
-                        <ul>
-                            <li>
-             {{ readFile "static/images/check2.svg" | safeHTML }} {{ $.Page.Params.card2text1 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text2 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text3 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text4 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text5 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text6 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text7 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text8 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text9 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text10 }}
-            </li>
-                        </ul>
-                    </div>
-                    <div class="pricingTable-signup">
-                        <a href="https://dashboard.aspose.app/billing/subscription/upgrade">{{ $.Page.Params.upgrad3 }}</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricingTable blue">
-                    <div class="pricingTable-header">
-                        
-                        <h3 class="heading mt-1">Business</h3>
-                    </div>
-                    
-                    <div class="price-value"> {{ $.Page.Params.cust0mpr1ce }} <span class="month">{{ $.Page.Params.p3rm0nth }}</span> </div>
-                    <div class="pricing-content">
-                        <ul>
-                            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text1 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text2 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text3 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text4 }}
-            </li>
-                        </ul>
-                    </div>
-                    <div class="pricingTable-signup">
-                        <a href="https://about.aspose.app/contact/">{{ $.Page.Params.c0ntact2s }}</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
+          {{ range first 1 . }}
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="pricingTable">
+              <div class="pricingTable-header">
+                <h3 class="heading mt-1">{{ .Name }}</h3>
+              </div>
 
-    <div class="tab-pane fade" id="yearly">
+              {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
+              <div class="price-value">
+                ${{ .SubscriptionPeriodCharge }}
+                <span class="month">{{ $.Page.Params.p3rm0nth }}</span>
+              </div>
+              {{ end }} {{ end }} {{end}}
+              <div class="pricing-content">
+                <ul>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text1 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text2 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text3 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text4 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text5 }}
+                  </li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="https://dashboard.aspose.app/"
+                  >{{ $.Page.Params.s1gnup }}</a
+                >
+              </div>
+            </div>
+          </div>
+          {{ range after 1 . }}
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="pricingTable green">
+              <div class="most-popular">Most Popular</div>
+              <div class="pricingTable-header">
+                <h3 class="heading mt-1">{{ .Name }}</h3>
+              </div>
+
+              {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
+              <div class="price-value">
+                ${{ .SubscriptionPeriodCharge }}
+                <span class="month">{{ $.Page.Params.p3rm0nth }}</span>
+              </div>
+              {{ end }} {{ end }} {{ end }}
+              <div class="pricing-content">
+                <ul>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card2text1 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card2text8 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card2text9 }}
+                  </li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a
+                  href="https://dashboard.aspose.app/billing/subscription/upgrade"
+                  >{{ $.Page.Params.upgrad3 }}</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="pricingTable blue">
+              <div class="pricingTable-header">
+                <h3 class="heading mt-1">Business</h3>
+              </div>
+
+              <div class="price-value">
+                {{ $.Page.Params.cust0mpr1ce }}
+                <span class="month">{{ $.Page.Params.p3rm0nth }}</span>
+              </div>
+              <div class="pricing-content">
+                <ul>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card3text1 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card3text2 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card3text3 }}
+                  </li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="https://about.aspose.app/contact/"
+                  >{{ $.Page.Params.c0ntact2s }}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center mt-1">*All prices are in USD</p>
+        <p class="text-center mb-5 mt-4">
+          {{ $.Page.Params.byUpl0ad1ng }}
+          <a href="https://about.aspose.app/legal/tos/" style="color: #1a89d0"
+            >{{ $.Page.Params.l1nk1text }}</a
+          >
+          {{ $.Page.Params.l1nk3d }}
+          <a
+            href="https://about.aspose.app/legal/privacy-policy/"
+            style="color: #1a89d0"
+            >{{ $.Page.Params.l1nk2text }}</a
+          >
+        </p>
+        <h3 class="display-6 text-center mb-4">Plan limits</h3>
+
+        <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;" scope="col"></th>
+            <th style="width: 22%;" scope="col">Free</th>
+            <th style="width: 22%;" scope="col">Premium (monthly)</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <th scope="row" class="text-start">The maximum number of barcode operations per day</th>
+          {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 0) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">The maximum number of barcode operations per month</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 1) }}
+            <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 0) (eq $k 1) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Add the company logo to the barcode</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 2) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+            {{ if and (eq $i 1) (eq $g 0) (eq $k 2) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}
+          {{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Customize the barcode colors</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 3) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+            {{ if and (eq $i 1) (eq $g 0) (eq $k 3) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}
+          {{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Customize the barcode padding</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 4) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+            {{ if and (eq $i 1) (eq $g 0) (eq $k 4) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}
+          {{end}}{{end}}{{end}}{{end}}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      </div>
+
+      <div class="tab-pane fade" id="yearly">
         <div class="row d-flex aligns-items-center justify-content-center">
-            {{ range first 1 . }}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricingTable">
-                    <div class="pricingTable-header">
-                        <h3 class="heading mt-1">{{ .Name }}</h3>
-                        
-                    </div>
-                    
-                    {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
-                        <div class="price-value"> ${{ .SubscriptionPeriodCharge }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
-                        {{ end }} {{ end }}
-                    {{end}}
-                    <div class="pricing-content">
-                        <ul>
-                            <li>
-             {{ readFile "static/images/check2.svg" | safeHTML }} {{ $.Page.Params.card1text1 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text2 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text3 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text4 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card1text5 }}
-            </li>
-                        </ul>
-                    </div>
-                    <div class="pricingTable-signup">
-                        <a href="https://dashboard.aspose.app/">{{ $.Page.Params.s1gnup }}</a>
-                    </div>
-                </div>
+          {{ range first 1 . }}
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="pricingTable">
+              <div class="pricingTable-header">
+                <h3 class="heading mt-1">{{ .Name }}</h3>
+              </div>
+
+              {{ range first 1 .PricingPlans }} {{ range .PaymentScheduleList }}
+              <div class="price-value">
+                ${{ .SubscriptionPeriodCharge }}
+                <span class="month">{{ $.Page.Params.p3ry3ar }}</span>
+              </div>
+              {{ end }} {{ end }} {{end}}
+              <div class="pricing-content">
+                <ul>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text1 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text2 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text3 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text4 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card1text5 }}
+                  </li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="https://dashboard.aspose.app/"
+                  >{{ $.Page.Params.s1gnup }}</a
+                >
+              </div>
             </div>
-            {{ range after 1 . }}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricingTable green">
-                  <div class="most-popular">Most Popular</div>
-                    <div class="pricingTable-header">
-                        <h3 class="heading mt-1">{{ .Name }}</h3>
-                       
-                    </div>
-                    
-                     {{ range after 1 .PricingPlans }} {{ range .PaymentScheduleList }}
-                        <div class="price-value"> ${{ .SubscriptionPeriodCharge }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
-                        {{ end }} {{ end }}
-                    {{ end }}
-                    <div class="pricing-content">
-                        <ul>
-                            <li>
-             {{ readFile "static/images/check2.svg" | safeHTML }} {{ $.Page.Params.card2text1 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text2 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text3 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text4 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text5 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text6 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text7 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text8 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text9 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card2text10 }}
-            </li>
-                        </ul>
-                    </div>
-                    <div class="pricingTable-signup">
-                        <a href="https://dashboard.aspose.app/billing/subscription/upgrade?pricingPlan=yearly">{{ $.Page.Params.upgrad3 }}</a>
-                    </div>
-                </div>
+          </div>
+          {{ range after 1 . }}
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="pricingTable green">
+              <div class="most-popular">Most Popular</div>
+              <div class="pricingTable-header">
+                <h3 class="heading mt-1">{{ .Name }}</h3>
+              </div>
+
+              {{ range after 1 .PricingPlans }} {{ range .PaymentScheduleList }}
+              <div class="price-value">
+                ${{ .SubscriptionPeriodCharge }}
+                <span class="month">{{ $.Page.Params.p3ry3ar }}</span>
+              </div>
+              {{ end }} {{ end }} {{ end }}
+              <div class="pricing-content">
+                <ul>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card2text1 }}
+                  </li>
+                  
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card2text8 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card2text9 }}
+                  </li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a
+                  href="https://dashboard.aspose.app/billing/subscription/upgrade?pricingPlan=yearly"
+                  >{{ $.Page.Params.upgrad3 }}</a
+                >
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricingTable blue">
-                    <div class="pricingTable-header">
-                        <h3 class="heading mt-1">Business</h3>
-                        
-                    </div>
-                    
-                    <div class="price-value custom-price"> {{ $.Page.Params.cust0mpr1ce }} <span class="month">{{ $.Page.Params.p3ry3ar }}</span> </div>
-                    <div class="pricing-content">
-                        <ul>
-                            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text1 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text2 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text3 }}
-            </li>
-            <li>
-              {{ readFile "static/images/check2.svg" | safeHTML }}
-              {{ $.Page.Params.card3text4 }}
-            </li>
-                        </ul>
-                    </div>
-                    <div class="pricingTable-signup">
-                        <a href="https://about.aspose.app/contact/">{{ $.Page.Params.c0ntact2s }}</a>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="pricingTable blue">
+              <div class="pricingTable-header">
+                <h3 class="heading mt-1">Business</h3>
+              </div>
+
+              <div class="price-value custom-price">
+                {{ $.Page.Params.cust0mpr1ce }}
+                <span class="month">{{ $.Page.Params.p3ry3ar }}</span>
+              </div>
+              <div class="pricing-content">
+                <ul>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card3text1 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card3text2 }}
+                  </li>
+                  <li>
+                    {{ readFile "static/images/check2.svg" | safeHTML }} {{
+                    $.Page.Params.card3text3 }}
+                  </li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="https://about.aspose.app/contact/"
+                  >{{ $.Page.Params.c0ntact2s }}</a
+                >
+              </div>
             </div>
+          </div>
         </div>
+        <p class="text-center mt-1">*All prices are in USD</p>
+        <p class="text-center mb-5 mt-4">
+          {{ $.Page.Params.byUpl0ad1ng }}
+          <a href="https://about.aspose.app/legal/tos/" style="color: #1a89d0"
+            >{{ $.Page.Params.l1nk1text }}</a
+          >
+          {{ $.Page.Params.l1nk3d }}
+          <a
+            href="https://about.aspose.app/legal/privacy-policy/"
+            style="color: #1a89d0"
+            >{{ $.Page.Params.l1nk2text }}</a
+          >
+        </p>
+        <h3 class="display-6 text-center mb-4">Plan limits</h3>
+        <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;" scope="col"></th>
+            <th style="width: 22%;" scope="col">Free</th>
+            <th style="width: 22%;" scope="col">Premium (yearly)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <th scope="row" class="text-start">The maximum number of barcode operations per day</th>
+          {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 0) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">The maximum number of barcode operations per month</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 1) }}
+            <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 1) }}
+          <td> {{ .MaxQuantity }} Operations </td>
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Add the company logo to the barcode</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 2) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 2) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Customize the barcode colors</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 3) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 3) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Customize the barcode padding</th>
+            {{ range $i, $y := . }}{{ range $g, $h := .PricingPlans }}{{ range $k, $l :=  .ProductItemsList }}{{ if eq .IsVisibleOnHostedPage true }}{{ if and (eq $i 0) (eq $g 0) (eq $k 4) }}
+            {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}{{end}}
+          {{ if and (eq $i 1) (eq $g 1) (eq $k 4) }}
+          {{ if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 0) }}
+            <td> <i class="fa fa-times" aria-hidden="true" style="color: grey;"></i> </td>
+            {{ else if and (eq .ProductItemType "OnOff") (eq (int .MaxQuantity) 1) }}
+            <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+            {{end}}
+          {{end}}{{end}}{{end}}{{end}}{{end}}
+          </tr>
+        </tbody>
+      </table>
     </div>
-           </div>
-    </div>
-    </div>
-    
 
-
-    
+      </div>
+    </div>
+  </div>
+</div>
 
 {{ end }}{{ end }} {{ end }} {{ end }}
-<p class="text-center mt-1">*All prices are in USD</p>
-<p class="text-center mb-5 mt-4">{{ .Params.byUpl0ad1ng }} <a href="https://about.aspose.app/legal/tos/" style="color: #1a89d0">{{ .Params.l1nk1text }}</a>  {{ .Params.l1nk3d }} <a href="https://about.aspose.app/legal/privacy-policy/" style="color: #1a89d0">{{ .Params.l1nk2text }}</a> </p>
-
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
