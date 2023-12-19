@@ -19,29 +19,27 @@ p3ry3ar: pro Jahr
 
 cust0mpr1ce: Benutzerdefinierter Preis
 
-card1text1: Geschichte der Generationen und Scans
+card1text1: Zugang zu Aspose-Anwendungen
 
-card1text2: Keine Werbung
+card1text2: Begrenzte Dateiverarbeitung
 
-card1text3: Keine Probezeit
+card1text3: Verschlüsselte Datenübertragung und Speicherung
 
-card1text4: Immer kostenlos
+card2text1: Vollzugriff auf Aspose-Anwendungen
 
-card1text5: Keine Abonnementgebühr
+card2text8: Erweiterte Werkzeuge und Funktionen
 
-card2text3: Zusätzliche Generierungseinstellungen
+card2text9: Erweiterte Grenzen der Dateiverarbeitung
 
-card2text4: Zusätzliche Dateiformate
+card2text10: Kundensupport
 
-card2text5: Zusätzliche QR-Kunst
+card3text1: Alle Funktionen des Premium-Plans
 
-card3text1: Flexible Zahlungsoptionen
+card3text2: Flexible Zahlungsoptionen
 
-card3text2: Benutzerdefinierter Vertrag
+card3text3: Unbegrenzte Dateiverarbeitung
 
-card3text3: Zusätzliche QR-Kunst
-
-card3text4: Zusätzliche Generierungseinstellungen
+card3text4: Persönlicher Account-Support-Manager
 
 s1gnup: MELDEN SIE SICH AN
 

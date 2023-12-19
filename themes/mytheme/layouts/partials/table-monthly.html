@@ -1,0 +1,125 @@
+<div class="container mt-4">
+    <table class="table table-bordered table-responsive custom-table">
+        <thead>
+          <tr>
+            {{/*  <th scope="col" class="align-middle text-center">Product</th>  */}}
+            <th scope="col" class="align-middle text-center">Service</th>
+            <th scope="col" class="align-middle text-center">Free</th>
+            <th scope="col" class="align-middle text-center">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {{/*  <td rowspan="9" class="align-middle text-center">Aspose.BarCode</td>  */}}
+            <td>Generate black and white barcodes</td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Recognize barcodes</td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Scan 1D or 2D barcodes</td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Fast scan QR code</td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Generate Wi-Fi QR code with default logo</td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+            <td class="align-middle text-center"><span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span></td>
+          </tr>
+          <tr>
+            <td>History of generated barcodes</td>
+            <td class="align-middle text-center">Limited (Registered users only)</td>
+            <td class="align-middle text-center">Unlimited</td>
+          </tr>
+          <tr>
+            <td>Generate colorful barcodes</td>
+            <td class="align-middle text-center">3 per day (Registered users only)</td>
+            <td class="align-middle text-center">Unlimited</td>
+          </tr>
+          <tr>
+            <td>History of recognized barcodes</td>
+            <td class="align-middle text-center">Limited (Registered users only)</td>
+            <td class="align-middle text-center">Unlimited</td>
+          </tr>
+          <!-- Add more rows as needed -->
+          {{/*  <tr>
+            <td>Product 2</td>
+            <td>Feature 6</td>
+            <td>Free Plan 6</td>
+            <td>Paid Plan 6</td>
+          </tr>  */}}
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    
+    </table>
+  </div>
+
+  <style>
+    /* Adjust column widths */
+    .custom-table th:first-child,
+    .custom-table td:first-child {
+      width: 18%;
+      padding-left: 1em;
+    }
+
+    .custom-table th:nth-child(2),
+    .custom-table td:nth-child(2) {
+      width: 24%;
+    }
+
+    .custom-table th:nth-child(3),
+    .custom-table td:nth-child(3),
+    .custom-table th:nth-child(4),
+    .custom-table td:nth-child(4) {
+      width: 29%;
+    }
+    .custom-table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+        margin-bottom: 0;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        border-radius: 10px;
+      }
+  
+      .custom-table th, .custom-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+      }
+  
+      .custom-table th {
+        background-color: #1a89d0;
+        color: #ffffff;
+        font-weight: 600;
+        border-top: 0;
+      }
+  
+      .custom-table tbody tr:hover {
+        background-color: #f8f9fa;
+      }
+      .comp-table__unicodeSymbolCheck{
+        font-size:22px;
+        font-weight:bold
+    }
+    .comp-table__unicodeSymbolX{
+        font-size:22px;
+        font-weight:bold
+    }
+    .comp-table__unicodeSymbolX{
+        color:#808080
+    }
+    .comp-table__unicodeSymbolCheck{
+        color:#4ac263
+    }
+  </style>

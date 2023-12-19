@@ -15,17 +15,17 @@ sav3: Save up to 43% on annual plans!
 p3rm0nth: per month
 p3ry3ar: per year
 cust0mpr1ce: Custom price
-card1text1: Ad-free
-card1text2: No Trial Period
-card1text3: Always Free
-card1text4: No Subscription Charge
-card1text5: Encrypted data transfer and storage
-card2text1: All features of the Free plan
-card2text8: Developer Support
-card2text9: Work on Web, Mobile and Desktop
+card1text1: Access to Aspose applications
+card1text2: Limited file processing
+card1text3: Encrypted data transfer and storage
+card2text1: Full access to Aspose applications
+card2text8: More advanced tools and features
+card2text9: Extended file processing limits
+card2text10: Customer support
 card3text1: All features of the Premium plan
-card3text2: Dedicated Support Account Manager
-card3text3: Custom negotiated volume discount
+card3text2: Flexible payment options
+card3text3: Unlimited file processing
+card3text4: Personal account support manager
 s1gnup: SIGN UP
 upgrad3: UPGRADE
 c0ntact2s: CONTACT US

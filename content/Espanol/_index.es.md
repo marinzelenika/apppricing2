@@ -31,29 +31,27 @@ p3ry3ar: por año
 
 cust0mpr1ce: Precio personalizado
 
-card1text1: Historial de generaciones y escaneos.
+card1text1: Acceso a aplicaciones de Aspose
 
-card1text2: Sin anuncios
+card1text2: Procesamiento de archivos limitado
 
-card1text3: Sin período de prueba
+card1text3: Transferencia y almacenamiento de datos encriptados
 
-card1text4: Siempre Gratis
+card2text1: Acceso completo a aplicaciones de Aspose
 
-card1text5: Sin cargo de suscripción
+card2text8: Herramientas y características más avanzadas
 
-card2text3: Configuraciones de generación adicionales
+card2text9: Límites de procesamiento de archivos extendidos
 
-card2text4: Formatos de archivo adicionales
+card2text10: Soporte al cliente
 
-card2text5: Arte QR adicional
+card3text1: Todas las características del plan Premium
 
-card3text1: opciones de pago flexibles
+card3text2: Opciones de pago flexibles
 
-card3text2: contrato personalizado
+card3text3: Procesamiento de archivos ilimitado
 
-card3text3: Arte QR adicional
-
-card3text4: Configuraciones de generación adicionales
+card3text4: Gerente de soporte de cuenta personal
 
 s1gnup: REGISTRARSE
 
