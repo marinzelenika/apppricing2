@@ -1,11 +1,25 @@
-.nav-pills{
-    font-size: large;
-    margin-bottom: 40px;
-    padding: 5px 5px;
+.nav-pills {
+  font-size: large;
+  margin-bottom: 40px;
+  padding: 5px 15px;
+  background-color: $primary; // Add blue background color
+  border-radius: 10px;
+  transition: background-color 0.3s ease; // Add transition effect
 }
-.nav-link{
-    border: 1px solid black;
-    border-radius: 0% !important;
+
+.nav-link {
+  border: 1px solid black;
+  border-radius: 5px 15px !important;
+  padding: 10px; // Add padding to nav links
+  color: white; // Set text color to white
+  margin: 0px 12px;
+  transition: all 0.5s ease-in-out; // Add transition effect for all properties
+}
+
+.nav-link.active {
+  background-color: white !important; // Set white background color on active link
+  color: $primary !important;
+  padding: 10px 15px;
 }
 .m-5{
     display: flex;
