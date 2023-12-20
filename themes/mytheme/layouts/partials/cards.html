@@ -1,4 +1,4 @@
-<div class="m-5">
+<div class="m-4">
   <ul class="nav nav-pills menu justify-content-center" id="myTab">
     <li class="nav-item active">
       <a href="#monthly" class="nav-link active">{{ .Params.m0nthly }}</a>
@@ -7,7 +7,7 @@
       <a href="#yearly" class="nav-link">{{ .Params.y3arly }}</a>
     </li>
   </ul>
-  <p class="save-on-annual">{{ .Params.sav3 }}</p>
+  <p class="save-on-annual" style="color: darkred;">{{ .Params.sav3 }}</p>
 </div>
 
 {{ $options := dict "method" "GET" }} {{ with resources.GetRemote

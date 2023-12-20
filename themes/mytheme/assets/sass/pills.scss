@@ -21,7 +21,7 @@
   color: $primary !important;
   padding: 10px 15px;
 }
-.m-5{
+.m-4{
     display: flex;
     justify-content: center;
     position: relative;
@@ -33,12 +33,17 @@
     font-size: medium;
     font-weight: 600;
 }
-@media (max-width: 359px) {
+@media (max-width: 399px) {
   .save-on-annual{
     top: 60px;
+    margin-top: .5em;
     clear: both;
+    text-align: center; // Align text center horizontally
   }
 }
+  .nav-pills {
+    padding: 6px 5px;
+  }
 @media (max-width: 320px) {
   .save-on-annual{
     top: 65px;
