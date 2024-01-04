@@ -7,7 +7,7 @@
       <a href="#yearly" class="nav-link">{{ .Params.y3arly }}</a>
     </li>
   </ul>
-  <p class="save-on-annual" style="color: #e53935;">{{ .Params.sav3 }}</p>
+  <p class="save-on-annual">{{ .Params.sav3 }}</p>
 </div>
 
 {{ $options := dict "method" "GET" }} {{ with resources.GetRemote
